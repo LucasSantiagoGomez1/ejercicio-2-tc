@@ -1,8 +1,8 @@
-grammar MiniLenguaje;
+grammar miniLenguaje;
 
 // 🖥️ Reglas del parser
 program : token* EOF ;
-token   : ID | INTEGER | STRING | KEYWORD | OPERATOR | SEPARATOR ;
+token   : ID | INTEGER | KEYWORD | OPERATOR | SEPARATOR ;
 
 // 🏷️ Reglas léxicas
 
@@ -11,7 +11,6 @@ ID          : [a-zA-Z][a-zA-Z0-9_]* ;
 
 // 🔢 Literales
 INTEGER     : [0-9]+ ;
-STRING      : '"' (~["\r\n] | '\"')* '"' ;
 BOOLEAN     : 'true' | 'false' ;
 
 // 🏷️ Palabras clave
